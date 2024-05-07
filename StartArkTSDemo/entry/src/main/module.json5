@@ -1,0 +1,55 @@
+{
+  "module": {
+    "requestPermissions": [
+      {
+        "name": 'ohos.permission.INTERNET'
+      }
+    ],
+    "name": "entry",
+    "type": "entry",
+    "srcEntry": './ets/myAbilityPages/MyAbilityStage.ets',
+    "description": "$string:module_desc",
+    "mainElement": "EntryAbility",
+    "deviceTypes": [
+      "phone",
+      "tablet",
+      "2in1"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "abilities": [
+      {
+        "name": "EntryAbility",
+        "srcEntry": "./ets/entryability/EntryAbility.ets",
+        "description": "$string:EntryAbility_desc",
+        "icon": "$media:layered_image",
+        "label": "$string:EntryAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background",
+        "exported": true,
+        "launchType": "singleton",
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "TestAbility",
+        "srcEntry": "./ets/testability/TestAbility.ets",
+        "description": "$string:TestAbility_desc",
+        "icon": "$media:layered_image",
+        "label": "$string:TestAbility_label",
+        "launchType": "specified",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background"
+      }
+    ]
+  }
+}

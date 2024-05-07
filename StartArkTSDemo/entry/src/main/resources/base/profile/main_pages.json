@@ -1,0 +1,9 @@
+{
+  "src": [
+    "demos/Demo5",
+    "demos/Demo9",
+    "NetRequest/NetRequest",
+    "NetRequest/AxiosRequest",
+    "notification/NotiPage"
+  ]
+}
